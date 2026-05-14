@@ -20,13 +20,13 @@ const PanelGroupTable = ({ panelGroups }) => {
           <tbody className="divide-y divide-gray-200 dark:divide-gray-700/50">
             {panelGroups.map((group, index) => {
               let rowClass = isDark ? 'hover:bg-gray-700/30' : 'hover:bg-gray-50';
-              
+
               if (group.status === "Offline") {
                 rowClass = isDark ? 'bg-red-900/20 hover:bg-red-900/30 text-red-200' : 'bg-red-50 hover:bg-red-100 text-red-900';
               } else if (group.status === "Degraded") {
                 rowClass = isDark ? 'bg-yellow-900/20 hover:bg-yellow-900/30 text-yellow-200' : 'bg-yellow-50 hover:bg-yellow-100 text-yellow-900';
               } else {
-                 rowClass += isDark ? ' text-gray-300' : ' text-gray-700';
+                rowClass += isDark ? ' text-gray-300' : ' text-gray-700';
               }
 
               return (
